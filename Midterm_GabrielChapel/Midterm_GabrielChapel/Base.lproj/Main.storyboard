@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Midterm_GabrielChapel" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round Trip Commute Miles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60F-38-HBo">
+                                <rect key="frame" x="16" y="59" width="207" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1s1-D5-Bbl">
+                                <rect key="frame" x="262" y="54" width="97" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Monthly Commute" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYu-k3-Akt">
+                                <rect key="frame" x="16" y="97" width="188" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AJX-sj-fL7">
+                                <rect key="frame" x="282" y="92" width="51" height="31"/>
+                                <connections>
+                                    <action selector="showMonthlyInfo:" destination="BYZ-38-t0r" eventType="valueChanged" id="YKE-aE-L6W"/>
+                                </connections>
+                            </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="0.0" maxValue="35" translatesAutoresizingMaskIntoConstraints="NO" id="zVa-51-rN3">
+                                <rect key="frame" x="243" y="142" width="118" height="31"/>
+                                <connections>
+                                    <action selector="changeTankGas:" destination="BYZ-38-t0r" eventType="valueChanged" id="aMW-IL-wcK"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lcg-JO-aZ9">
+                                <rect key="frame" x="154" y="276" width="67" height="30"/>
+                                <state key="normal" title="Commute"/>
+                                <connections>
+                                    <action selector="commuteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BtM-xr-YkM"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="iZi-iX-Tee">
+                                <rect key="frame" x="116" y="188" width="143" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="143" id="7RO-nl-jCk"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Car"/>
+                                    <segment title="Bus"/>
+                                    <segment title="Bike"/>
+                                </segments>
+                                <connections>
+                                    <action selector="transportSelect:" destination="BYZ-38-t0r" eventType="valueChanged" id="EYk-mN-Yog"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bdh-pI-TB2">
+                                <rect key="frame" x="253" y="323" width="106" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="106" id="FWZ-HA-ya9"/>
+                                    <constraint firstAttribute="height" constant="39" id="WgL-d1-0gm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7D-al-WRb">
+                                <rect key="frame" x="253" y="383" width="106" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Commute Time (hr)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJO-LO-h53">
+                                <rect key="frame" x="17" y="332" width="191" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gas Needed for Commute (gal)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jgY-fn-u93">
+                                <rect key="frame" x="7" y="392" width="238" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car" translatesAutoresizingMaskIntoConstraints="NO" id="sNl-lE-RuR">
+                                <rect key="frame" x="67" y="474" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="7VZ-5a-xj9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqk-gd-yM2">
+                                <rect key="frame" x="154" y="147" width="69" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commute" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n37-5e-WsO">
+                                <rect key="frame" x="133" y="20" width="110" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Gas in Tank (gal)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mus-SM-pfU">
+                                <rect key="frame" x="16" y="146" width="127" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qqk-gd-yM2" firstAttribute="centerY" secondItem="zVa-51-rN3" secondAttribute="centerY" id="2vW-PA-hrR"/>
+                            <constraint firstItem="Bdh-pI-TB2" firstAttribute="leading" secondItem="KJO-LO-h53" secondAttribute="trailing" constant="45" id="3ap-td-kKI"/>
+                            <constraint firstItem="lYu-k3-Akt" firstAttribute="top" secondItem="60F-38-HBo" secondAttribute="bottom" constant="17" id="4nQ-zx-Nj4"/>
+                            <constraint firstItem="n37-5e-WsO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="56m-5U-t40"/>
+                            <constraint firstItem="zVa-51-rN3" firstAttribute="trailing" secondItem="s7D-al-WRb" secondAttribute="trailing" id="A3E-KT-OdR"/>
+                            <constraint firstItem="qqk-gd-yM2" firstAttribute="centerX" secondItem="n37-5e-WsO" secondAttribute="centerX" id="ARi-vp-jRs"/>
+                            <constraint firstItem="lYu-k3-Akt" firstAttribute="leading" secondItem="60F-38-HBo" secondAttribute="leading" id="B5O-f5-6JP"/>
+                            <constraint firstItem="1s1-D5-Bbl" firstAttribute="leading" secondItem="60F-38-HBo" secondAttribute="trailing" constant="39" id="Cpg-pD-iWN"/>
+                            <constraint firstItem="qqk-gd-yM2" firstAttribute="trailing" secondItem="60F-38-HBo" secondAttribute="trailing" id="EP8-jp-45K"/>
+                            <constraint firstItem="60F-38-HBo" firstAttribute="top" secondItem="n37-5e-WsO" secondAttribute="bottom" constant="9" id="EkY-eH-RL8"/>
+                            <constraint firstItem="Bdh-pI-TB2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="323" id="IJe-2k-jX9"/>
+                            <constraint firstItem="iZi-iX-Tee" firstAttribute="centerX" secondItem="sNl-lE-RuR" secondAttribute="centerX" id="ISr-xz-ZC1"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="60F-38-HBo" secondAttribute="leading" id="JGi-MN-5lM"/>
+                            <constraint firstItem="Bdh-pI-TB2" firstAttribute="centerX" secondItem="AJX-sj-fL7" secondAttribute="centerX" id="KTF-tQ-1dR"/>
+                            <constraint firstItem="AJX-sj-fL7" firstAttribute="top" secondItem="1s1-D5-Bbl" secondAttribute="bottom" constant="8" symbolic="YES" id="LPg-Gy-wlY"/>
+                            <constraint firstItem="qqk-gd-yM2" firstAttribute="baseline" secondItem="Mus-SM-pfU" secondAttribute="baseline" id="NDu-Yh-kW3"/>
+                            <constraint firstItem="qqk-gd-yM2" firstAttribute="leading" secondItem="Mus-SM-pfU" secondAttribute="trailing" id="OgL-p9-tic"/>
+                            <constraint firstItem="iZi-iX-Tee" firstAttribute="centerX" secondItem="Lcg-JO-aZ9" secondAttribute="centerX" id="Puf-BU-gXZ"/>
+                            <constraint firstItem="zVa-51-rN3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="UJ6-qz-S2N"/>
+                            <constraint firstItem="sNl-lE-RuR" firstAttribute="top" secondItem="s7D-al-WRb" secondAttribute="bottom" constant="53" id="YzT-dh-N6p"/>
+                            <constraint firstItem="zVa-51-rN3" firstAttribute="leading" secondItem="qqk-gd-yM2" secondAttribute="trailing" constant="22" id="ZLh-BF-rWO"/>
+                            <constraint firstItem="Lcg-JO-aZ9" firstAttribute="top" secondItem="iZi-iX-Tee" secondAttribute="bottom" constant="60" id="b56-fZ-qHg"/>
+                            <constraint firstItem="zVa-51-rN3" firstAttribute="trailing" secondItem="Bdh-pI-TB2" secondAttribute="trailing" id="cUx-nz-hsQ"/>
+                            <constraint firstItem="iZi-iX-Tee" firstAttribute="top" secondItem="qqk-gd-yM2" secondAttribute="bottom" constant="20" id="dTM-wF-SyG"/>
+                            <constraint firstItem="Bdh-pI-TB2" firstAttribute="leading" secondItem="s7D-al-WRb" secondAttribute="leading" id="fUW-uX-LNO"/>
+                            <constraint firstItem="qqk-gd-yM2" firstAttribute="firstBaseline" secondItem="Mus-SM-pfU" secondAttribute="baseline" id="jiV-9m-P2j"/>
+                            <constraint firstItem="s7D-al-WRb" firstAttribute="top" secondItem="Bdh-pI-TB2" secondAttribute="bottom" constant="21" id="kUY-3F-0gm"/>
+                            <constraint firstItem="zVa-51-rN3" firstAttribute="trailing" secondItem="1s1-D5-Bbl" secondAttribute="trailing" id="mfA-iP-oKU"/>
+                            <constraint firstItem="n37-5e-WsO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="n9t-cL-Rrd"/>
+                            <constraint firstItem="qqk-gd-yM2" firstAttribute="leading" secondItem="Lcg-JO-aZ9" secondAttribute="leading" id="pcn-d5-Zwz"/>
+                            <constraint firstItem="zVa-51-rN3" firstAttribute="top" secondItem="AJX-sj-fL7" secondAttribute="bottom" constant="19" id="rR2-QZ-o6M"/>
+                            <constraint firstItem="Bdh-pI-TB2" firstAttribute="centerY" secondItem="KJO-LO-h53" secondAttribute="centerY" id="tO8-1y-dtU"/>
+                            <constraint firstItem="sNl-lE-RuR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="51" id="tyt-uC-IMB"/>
+                            <constraint firstItem="Mus-SM-pfU" firstAttribute="top" secondItem="lYu-k3-Akt" secondAttribute="bottom" constant="29" id="y9U-Ja-t04"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sNl-lE-RuR" secondAttribute="bottom" constant="65" id="zlR-7h-cOg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="miles" destination="1s1-D5-Bbl" id="eQT-T0-vE8"/>
+                        <outlet property="monthSwitch" destination="AJX-sj-fL7" id="44H-Bd-y3O"/>
+                        <outlet property="tankGas" destination="qqk-gd-yM2" id="Nta-lJ-pb3"/>
+                        <outlet property="totalCommuteTime" destination="Bdh-pI-TB2" id="OYV-36-Tbl"/>
+                        <outlet property="totalGasNeeded" destination="s7D-al-WRb" id="k7B-5W-SGz"/>
+                        <outlet property="transportImage" destination="sNl-lE-RuR" id="kfY-Rb-8YN"/>
+                        <outlet property="transportType" destination="iZi-iX-Tee" id="uNt-0F-G1D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="car" width="112" height="112"/>
+    </resources>
+</document>
