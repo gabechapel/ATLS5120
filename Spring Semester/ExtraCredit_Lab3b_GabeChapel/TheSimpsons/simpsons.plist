@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Homer Simpson</string>
+		<key>url</key>
+		<string>https://simpsonswiki.com/wiki/Homer_Simpson</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Marge Simpson</string>
+		<key>url</key>
+		<string>https://simpsonswiki.com/wiki/Marge_Simpson</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Bart Simpson</string>
+		<key>url</key>
+		<string>https://simpsonswiki.com/wiki/Bart_Simpson</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Lisa Simpson</string>
+		<key>url</key>
+		<string>https://simpsonswiki.com/wiki/Lisa_Simpson</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Maggie Simpson</string>
+		<key>url</key>
+		<string>https://simpsonswiki.com/wiki/Maggie_Simpson</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Ned Flanders</string>
+		<key>url</key>
+		<string>https://simpsonswiki.com/wiki/Ned_Flanders
+</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Montgomery Burns</string>
+		<key>url</key>
+		<string>https://simpsonswiki.com/wiki/Charles_Montgomery_Burns</string>
+	</dict>
+</array>
+</plist>
